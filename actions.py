@@ -13,7 +13,7 @@ def query(intent, key_word):
     if result['total'] == 0:
         return "Empty result with keyword '{}'".format(key_word)
     first_result = result['items'][0]
-    if first_result['title'].lower().find('key_word') == -1:
+    if first_result['title'].lower().find(key_word) == -1:
         return "Not found"
     article_id = first_result['id']
 
